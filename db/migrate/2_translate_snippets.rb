@@ -1,9 +1,9 @@
 class TranslateSnippets < ActiveRecord::Migration
 
   def up
-    ::Refinery::Snippet.reset_column_information
-    unless ::Refinery::Snippet::Translation.table_exists?
-      ::Refinery::Snippet.create_translation_table!({
+    ::Refinery::Snippets::Snippet.reset_column_information
+    unless ::Refinery::Snippets::Snippet::Translation.table_exists?
+      ::Refinery::Snippets::Snippet.create_translation_table!({
         :body => :text
       }, {
         :migrate_data => true
@@ -12,9 +12,9 @@ class TranslateSnippets < ActiveRecord::Migration
   end
 
   def down
-    ::Refinery::Snippet.reset_column_information
+    ::Refinery::Snippets::Snippet.reset_column_information
 
-    ::Refinery::Snippet.drop_translation_table!
+    ::Refinery::Snippets::Snippet.drop_translation_table!
   end
 
 end

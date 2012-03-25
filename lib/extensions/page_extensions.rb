@@ -13,7 +13,7 @@ module Extensions
         }
 
         def snippets
-          Refinery::Snippet.for_page(self)
+          Refinery::Snippets::Snippet.for_page(self)
         end
 
       end

@@ -5,101 +5,13 @@ Gem::Specification.new do |s|
   s.description       = %q{Ruby on Rails Snippets engine for Refinery CMS}
   s.date              = %q{2012-02-25}
   s.summary           = %q{Html snippets for Refinery CMS page}
-  s.authors           = ['Marek L.', 'Rodrigo Garcia Suarez']
+  s.authors           = ['Marek L.', 'Rodrigo Garcia Suarez', 'Pritesh Mehta']
   s.email             = %q{nospam.keram@gmail.com}
   s.require_paths     = %w(lib)
-  
-  s.add_dependency    'refinerycms-pages', '>= 2.0.0'
 
-  s.files             = [
-    'db',
-    'db/migrate',
-    'db/migrate/2_translate_snippets.rb',
-    'db/migrate/3_create_snippets_page_parts.rb',
-    'db/migrate/1_create_snippets.rb',
-    'db/seeds.rb',
-    'app',
-    'app/views',
-    'app/views/admin',
-    'app/views/admin/pages',
-    'app/views/admin/pages/tabs',
-    'app/views/admin/pages/tabs/_snippets_field.html.erb',
-    'app/views/refinery',
-    'app/views/refinery/admin',
-    'app/views/refinery/admin/pages',
-    'app/views/refinery/admin/pages/tabs',
-    'app/views/refinery/admin/pages/tabs/_snippets.html.erb',
-    'app/views/refinery/admin/pages/tabs/_snippets_field.html.erb',
-    'app/views/refinery/admin/pages/tabs/_snippets_content.html.erb',
-    'app/views/refinery/admin/pages/tabs/_snippets_list_item.html.erb',
-    'app/views/refinery/admin/snippets_page_parts',
-    'app/views/refinery/admin/snippets_page_parts/remove.html.erb',
-    'app/views/refinery/admin/snippets_page_parts/add.html.erb',
-    'app/views/refinery/admin/snippets',
-    'app/views/refinery/admin/snippets/index.html.erb',
-    'app/views/refinery/admin/snippets/edit.html.erb',
-    'app/views/refinery/admin/snippets/_snippets.html.erb',
-    'app/views/refinery/admin/snippets/_locale_picker.html.erb',
-    'app/views/refinery/admin/snippets/_actions.html.erb',
-    'app/views/refinery/admin/snippets/_records.html.erb',
-    'app/views/refinery/admin/snippets/new.html.erb',
-    'app/views/refinery/admin/snippets/_form.html.erb',
-    'app/views/refinery/admin/snippets/_snippet.html.erb',
-    'app/views/refinery/admin/snippets/_sortable_list.html.erb',
-    'app/assets',
-    'app/assets/stylesheets',
-    'app/assets/stylesheets/page-snippet-picker.css',
-    'app/assets/javascripts',
-    'app/assets/javascripts/part-snippets-select.js',
-    'app/assets/javascripts/page-snippet-picker.js',
-    'app/controllers',
-    'app/controllers/refinery',
-    'app/controllers/refinery/admin',
-    'app/controllers/refinery/admin/snippets_controller.rb',
-    'app/controllers/refinery/admin/snippets_page_parts_controller.rb',
-    'app/models',
-    'app/models/refinery',
-    'app/models/refinery/snippet_page.rb',
-    'app/models/refinery/snippet.rb',
-    'app/models/refinery/snippet_page_part.rb',
-    'lib',
-    'lib/gemspec.rb',
-    'lib/tasks',
-    'lib/tasks/snippets.rake',
-    'lib/refinerycms-snippets.rb',
-    'lib/generators',
-    'lib/generators/refinery',
-    'lib/generators/refinery/snippets_generator.rb',
-    'lib/extensions',
-    'lib/extensions/pages_helper_extensions.rb',
-    'lib/extensions/page_extensions.rb',
-    'lib/refinery',
-    'lib/refinery/snippets.rb',
-    'lib/refinery/snippets',
-    'lib/refinery/snippets/tabs.rb',
-    'lib/refinery/snippets/engine.rb',
-    'lib/refinery/snippets/version.rb',
-    'spec',
-    'spec/models',
-    'spec/models/page_spec.rb',
-    'spec/models/snippet_spec.rb',
-    'spec/helpers',
-    'spec/helpers/pages_helper_spec.rb',
-    'refinerycms-snippets.gemspec',
-    'config',
-    'config/routes.rb',
-    'config/locales',
-    'config/locales/cs.yml',
-    'config/locales/en.yml',
-    'config/locales/es.yml',
-    'config/locales/nl.yml',
-    'features',
-    'features/support',
-    'features/support/paths.rb',
-    'features/manage_snippets.feature',
-    'features/step_definitions',
-    'features/step_definitions/snippet_steps.rb',
-    'readme.md'
-  ]
-  s.require_path = 'lib'
+  s.add_dependency    'refinerycms-pages', '>= 2.0.0'
+  s.add_development_dependency    'rspec'
+
+  s.files             = `git ls-files`.split("\n")
+  s.test_files        = `git ls-files -- spec/*`.split("\n")
 end

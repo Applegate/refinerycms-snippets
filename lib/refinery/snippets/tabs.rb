@@ -1,5 +1,5 @@
 module Refinery
-  module Snippets    
+  module Snippets
     class Tab
       attr_accessor :name, :partial
 

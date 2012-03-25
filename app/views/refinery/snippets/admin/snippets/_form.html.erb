@@ -1,4 +1,4 @@
-<%= form_for [refinery, :admin, @snippet] do |f| -%>
+<%= form_for [refinery, :snippets, :admin, @snippet] do |f| -%>
   <%= render :partial => "/refinery/admin/error_messages", :locals => {
           :object => @snippet,
           :include_object_name => true
@@ -29,7 +29,7 @@
               :locals => {
                 :f => f,
                 :continue_editing => true,
-                :delete_title => t('delete', :scope => 'refinery.admin.snippets.snippet'),
-                :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @snippet.title)
+                :delete_title => t('delete', :scope => 'refinery.snippets.admin.snippets.snippet'),
+                :delete_confirmation => t('message', :scope => 'refinery.snippets.admin.delete', :title => @snippet.title)
               } %>
 <% end -%>

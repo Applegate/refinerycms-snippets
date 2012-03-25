@@ -7,4 +7,4 @@
 <%= render :partial => '/refinery/admin/make_sortable',
             :locals => {
               :tree => false
-            } if !searching? and Refinery::Admin::SnippetsController.sortable? and Refinery::Snippet.count > 1 %>
+            } if !searching? and Refinery::Snippets::Admin::SnippetsController.sortable? and Refinery::Snippets::Snippet.count > 1 %>

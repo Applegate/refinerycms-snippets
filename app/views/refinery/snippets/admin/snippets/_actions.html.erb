@@ -1,25 +1,25 @@
 <ul>
-  <% if Refinery::Admin::SnippetsController.searchable? %>
+  <% if Refinery::Snippets::Admin::SnippetsController.searchable? %>
     <li>
       <%= render :partial => "/refinery/admin/search",
                   :locals => {
-                    :url => refinery.admin_snippets_path
+                    :url => refinery.snippets_admin_snippets_path
                   } %>
     </li>
   <% end %>
   <li>
-    <%= link_to t('.create_new'), refinery.new_admin_snippet_path,
+    <%= link_to t('.create_new'), refinery.new_snippets_admin_snippet_path,
                  :class => "add_icon" %>
   </li>
-<% if !searching? and Refinery::Admin::SnippetsController.sortable? and Refinery::Snippet.count > 1 %>
+<% if !searching? and Refinery::Snippets::Admin::SnippetsController.sortable? and Refinery::Snippets::Snippet.count > 1 %>
   <li>
     <%= link_to t('.reorder', :what => "Snippets"),
-                 refinery.update_positions_admin_snippets_path,
+                 refinery.update_positions_snippets_admin_snippets_path,
                  :id => "reorder_action",
                  :class => "reorder_icon" %>
 
     <%= link_to t('.reorder_done', :what => "Snippets"),
-                 refinery.update_positions_admin_snippets_path,
+                 refinery.update_positions_snippets_admin_snippets_path,
                  :id => "reorder_action_done",
                  :style => "display: none;",
                  :class => "reorder_icon" %>

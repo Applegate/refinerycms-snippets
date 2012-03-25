@@ -11,9 +11,9 @@
     <% end %>
   </span>
   <span class='actions'>
-    <%= link_to refinery_icon_tag('application_edit.png'), refinery.edit_admin_snippet_path(snippet),
+    <%= link_to refinery_icon_tag('application_edit.png'), refinery.edit_snippets_admin_snippet_path(snippet),
         :title => t('.edit') %>
-    <%= link_to refinery_icon_tag('delete.png'), refinery.url_for({:controller => 'snippets_page_parts', :action => 'remove', :id => @page.id, :snippet_id => snippet.id, :part_id => part.id, :before_body => before_body}),
+      <%= link_to refinery_icon_tag('delete.png'), refinery.remove_snippets_admin_snippet_snippets_page_part_path(snippet.id, :part_id => part.id, :id => @page.id, :before_body => before_body),
         :title => t('.remove'),
         :class => 'remove-snippet' %>
   </span>

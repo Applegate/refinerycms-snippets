@@ -10,7 +10,7 @@
       <% end %>
     </ul>
   </div>
-  <%= render :partial => '/refinery/admin/pages/tabs/snippets_field', :collection => @page.parts, :as => :part %>
+  <%= render :partial => '/refinery/snippets/admin/pages/tabs/snippets_field', :collection => @page.parts, :as => :part || 'Boo' %>
 <% end %>
 
 <% content_for :stylesheets do %>
