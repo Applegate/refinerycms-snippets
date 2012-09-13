@@ -15,7 +15,7 @@ module Refinery
         snippet_page_part.position = (Refinery::Snippets::SnippetPagePart.where('page_part_id = ?', snippet_page_part.page_part_id).maximum(:position) || -1) + 1
       end
       
-      default_scope :order("position ASC")
+      default_scope order("position ASC")
       scope :before, where(SnippetPagePart.table_name => {:before_body => true})
       scope :after, where(SnippetPagePart.table_name => {:before_body => false})
 
