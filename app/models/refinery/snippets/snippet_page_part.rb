@@ -14,6 +14,8 @@ module Refinery
       before_save do |snippet_page_part|
         snippet_page_part.position = (Refinery::Snippets::SnippetPagePart.where('page_part_id = ?', snippet_page_part.page_part_id).maximum(:position) || -1) + 1
       end
+      
+      default_scope :recent, order("position ASC")
 
     end
   end
