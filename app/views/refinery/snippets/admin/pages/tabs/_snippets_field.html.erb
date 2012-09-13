@@ -32,12 +32,12 @@
               <span class="title"><%= snippet.title %></span>
               <div class="actions">
                 <% unless snippet.after?(part) %>
-                  <%= link_to( t('.add_before_body'), refinery.add_snippets_admin_snippet_snippets_page_part_path(snippet.id, :part_id => part.id, :id => @page.id, :before_body => false), :class => 'add_icon add-snippet') %>
+                  <%= link_to( t('.add_after_body'), refinery.add_snippets_admin_snippet_snippets_page_part_path(snippet.id, :part_id => part.id, :id => @page.id, :before_body => false), :class => 'add_icon add-snippet') %>
                 <% else %>
                   <span class="add-snippet"><%= t('.add_after_body') %></span>
                 <% end %>
                 <% unless snippet.before?(part) %>
-                  <%= link_to( t('.add_after_body'), refinery.add_snippets_admin_snippet_snippets_page_part_path(snippet.id, :part_id => part.id, :id => @page.id, :before_body => true), :class => 'add_icon add-snippet') %>
+                  <%= link_to( t('.add_before_body'), refinery.add_snippets_admin_snippet_snippets_page_part_path(snippet.id, :part_id => part.id, :id => @page.id, :before_body => true), :class => 'add_icon add-snippet') %>
                 <% else %>
                   <span class=" add-snippet"><%= t('.add_before_body') %></span>
                 <% end %>
