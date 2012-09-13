@@ -4,13 +4,13 @@
     <% if part.snippets.before.any? %>
       <h2><%= t('.before_body') %></h2>
       <ul>
-        <%= render :partial => '/refinery/snippets/admin/pages/tabs/snippets_list_item', :collection => part.snippets.before, :as => :snippet, :locals => {:part => part, :before_body => true} %>
+        <%= render :partial => '/refinery/snippets/admin/pages/tabs/snippets_list_item', :collection => part.snippet_page_parts.before, :as => :snippet_page_part, :locals => {:part => part, :before_body => true} %>
       </ul>
     <% end %>
     <% if part.snippets.after.any? %>
       <h2><%= t('.after_body') %></h2>
       <ul>
-        <%= render :partial => '/refinery/snippets/admin/pages/tabs/snippets_list_item', :collection => part.snippets.after, :as => :snippet, :locals => {:part => part, :before_body => false} %>
+        <%= render :partial => '/refinery/snippets/admin/pages/tabs/snippets_list_item', :collection => part.snippet_page_parts.after, :as => :snippet_page_part, :locals => {:part => part, :before_body => false} %>
       </ul>
     <% end %>
   </div>
